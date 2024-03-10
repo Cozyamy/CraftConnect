@@ -1,6 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Landing } from "./routes";
-import { whatsCraft } from "./components";
 export default function App() {
 	return (
 		<section className="container">
