@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { navigation_links } from "../../../assets/data";
+import { NAVIGATION_LINKS } from "../../../assets/data";
 import "./index.css";
 
 export function NavBar() {
@@ -38,7 +38,7 @@ function Logo() {
 }
 
 function NavigationLinks() {
-	const links = navigation_links.map((link, index) => {
+	const links = NAVIGATION_LINKS.map((link, index) => {
 		const { title, href } = link;
 
 		return (
@@ -60,9 +60,12 @@ function NavigationLinks() {
 function CTA_Button() {
 	return (
 		<Fragment>
-			<button className="header__cta">
+			<Link
+				to="/signup"
+				className="header__cta flexbox"
+			>
 				<span>Sign Up</span>
-			</button>
+			</Link>
 		</Fragment>
 	);
 }
