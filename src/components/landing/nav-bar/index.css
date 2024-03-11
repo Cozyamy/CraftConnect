@@ -1,10 +1,14 @@
 .header {
     background-color: var(--white-100);
+    /* box-shadow: 0 0 .75rem 4rem rgba(25, 25, 25, 0.5); */
 }
 
 .header__wrapper {
     padding: 1rem 5rem;
     justify-content: space-between !important;
+    /* box-shadow: 0 0 .75rem 4rem rgba(25, 25, 25, 0.5); */
+    box-shadow: 4px 10px 0px 10px red;
+    /* z-index: 5; */
 }
 
 .header__logo {

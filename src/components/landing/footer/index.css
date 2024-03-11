@@ -1,0 +1,131 @@
+.footer {
+    height: 19.5rem;
+    background-color: var(--blue-300);
+    font-family: var(--ff-rc);
+}
+
+.footer__wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 4.25rem 4.5rem;
+    color: var(--white-100);
+
+    >* {
+        width: 50%;
+    }
+}
+
+.footer__links-wrapper {
+    justify-content: space-between !important;
+
+    aside {
+        gap: 3.25rem;
+        align-items: flex-start;
+    }
+
+    >ul,
+    aside>ul {
+        flex-direction: column;
+    }
+}
+
+.footer__links-left li:first-child {
+    margin-bottom: calc(var(--spacing) * 2);
+}
+
+.footer__links-left li:not(:first-child) {
+    margin-top: var(--spacing);
+    font-family: .75rem;
+    font-weight: 400;
+}
+
+.footer__links-left {
+    align-items: flex-start !important;
+}
+
+.footer__links-center>li:first-child,
+.footer__links-right>li:first-child {
+    margin-bottom: calc(var(--spacing) * 1.25);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.footer__links-center>li:not(:first-child),
+.footer__links-right>li:not(:first-child) {
+    text-transform: uppercase;
+    font-family: .75rem;
+    font-weight: 400;
+    gap: 1.25rem;
+}
+
+.footer__links-center {
+    align-items: flex-start !important;
+
+    li:nth-of-type(2) {
+        margin-bottom: .75rem;
+    }
+
+    li:nth-of-type(3) {
+        margin-top: .75rem;
+    }
+
+    li:nth-of-type(4) {
+        margin-top: 3.75rem;
+    }
+}
+
+.footer__links-right ul {
+    gap: 1.25rem;
+
+    i {
+        height: 1rem;
+        width: 1rem;
+    }
+}
+
+.footer__logo {
+    width: 8.5rem;
+    height: 3.25rem;
+
+    a {
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        object-fit: contain;
+    }
+}
+
+.footer__form {
+    width: 33rem;
+    height: 4rem;
+    margin-left: auto;
+    border: .0625rem solid rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+    border-radius: var(--border-radius);
+
+}
+
+.footer__form input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 1.25rem .75rem;
+    background-color: transparent;
+    color: var(--white-100);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.footer__form button {
+    width: 11.25rem;
+    border-radius: var(--border-radius);
+    height: 100%;
+    background-color: var(--white-100);
+    color: var(--black-200);
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 1rem;
+}

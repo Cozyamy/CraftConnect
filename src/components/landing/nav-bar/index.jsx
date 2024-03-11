@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { NAVIGATION_LINKS } from "../../../assets/data";
@@ -8,7 +9,7 @@ export function NavBar() {
 		<Fragment>
 			<header className="header">
 				<div className="header__wrapper flexbox">
-					<Logo />
+					<Logo image={"/logo.png"} />
 
 					<nav className="header__navigation flexbox">
 						<NavigationLinks />
@@ -21,7 +22,7 @@ export function NavBar() {
 	);
 }
 
-function Logo() {
+export function Logo({ image }) {
 	return (
 		<Fragment>
 			<Link
@@ -29,7 +30,7 @@ function Logo() {
 				className="header__logo flexbox"
 			>
 				<img
-					src="/logo.png"
+					src={image}
 					alt="craft_connect_logo"
 				/>
 			</Link>
@@ -38,7 +39,9 @@ function Logo() {
 }
 
 function NavigationLinks() {
-	const links = NAVIGATION_LINKS.map((link, index) => {
+	let links;
+
+	links = NAVIGATION_LINKS.map((link, index) => {
 		const { title, href } = link;
 
 		return (
@@ -69,3 +72,7 @@ function CTA_Button() {
 		</Fragment>
 	);
 }
+
+Logo.propTypes = {
+	image: PropTypes.string.isRequired,
+};
