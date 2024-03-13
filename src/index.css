@@ -3,20 +3,27 @@
   --blue-100: #0F6C96;
   --blue-200: #1287BB;
   --blue-300: #0B5171;
+  --blue-400: #F6FBFE;
 
   --white-100: #FFFFFF;
-  --white-200: #333333;
 
   --black-100: #000000;
   --black-200: #1A1A1A;
+  --black-300: #333333;
 
   /* fonts */
   --ff-ws: "Work Sans",
+    sans-serif;
+  --ff-rc: "Roboto Condensed",
     sans-serif;
 
   /* sizing */
   --spacing: 1rem;
   --screen-width: 90rem;
+
+  /* misc */
+  --transition: 250ms;
+  --border-radius: 1rem;
 }
 
 
@@ -47,4 +54,9 @@ ul {
 img {
   width: 100%;
   height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
