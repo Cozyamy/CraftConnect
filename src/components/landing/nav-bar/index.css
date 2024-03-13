@@ -1,11 +1,14 @@
 .header {
     background-color: var(--white-100);
+    /* box-shadow: 0 0 .75rem 4rem rgba(25, 25, 25, 0.5); */
 }
 
 .header__wrapper {
     padding: 1rem 5rem;
     justify-content: space-between !important;
-    border: 1px solid var(--color-red);
+    /* box-shadow: 0 0 .75rem 4rem rgba(25, 25, 25, 0.5); */
+    box-shadow: 4px 10px 0px 10px red;
+    /* z-index: 5; */
 }
 
 .header__logo {
@@ -22,13 +25,19 @@
     font-weight: 500;
     color: var(--black-200);
     text-decoration: none;
+    transition: var(--transition) color ease;
+}
+
+.header__navigation ul li a.active,
+.header__navigation ul li a:hover {
+    color: var(--blue-100)
 }
 
 .header__cta {
     height: 4rem;
     width: 7.5rem;
     border: none;
-    background-color: var(--blue-200);
+    background-color: var(--blue-100);
     border-radius: .75rem;
 }
 

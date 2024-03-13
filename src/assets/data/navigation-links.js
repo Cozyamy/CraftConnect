@@ -1,18 +1,18 @@
-export const navigation_links = [
+export const NAVIGATION_LINKS = [
 	{
 		title: "Home",
 		href: "/",
 	},
 	{
 		title: "Services",
-		href: "/",
+		href: "/services",
 	},
 	{
 		title: "About Us",
-		href: "/",
+		href: "/about",
 	},
 	{
 		title: "Contact Us",
-		href: "/",
+		href: "/contact",
 	},
 ];
