@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { Footer, Hero, NavBar, WhatAndWhy } from "../../components";
+import { Footer, Hero, NavBar, SectionWhy, WhatsCraft, Category } from "../../components";
 import "./index.css";
 
 export function Landing() {
@@ -16,7 +17,19 @@ export function Landing() {
 					</Fragment>
 
 					<Fragment>
-						{/* <WhatAndWhy /> */}
+						{<WhatsCraft /> }
+					</Fragment>
+
+					<Fragment>
+						{<SectionWhy /> }
+					</Fragment>
+
+					<Fragment>
+						{<Category /> }
+					</Fragment>
+
+					<Fragment>
+						{/* {<Testimonials /> } */}
 					</Fragment>
 				</div>
 			</main>

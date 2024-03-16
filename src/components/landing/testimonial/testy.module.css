@@ -1,0 +1,66 @@
+/* testy.module.css */
+
+.testimonials {
+  /* position: relative; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.testimonial {
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.testimonial p {
+  margin: 10px 0;
+}
+
+.testimonial p.author {
+  font-weight: 500;
+  color: #0f6c96;
+  font-size:25px;
+}
+.image {
+  width: 100px;
+  height: auto;
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px; /* Add margin to create space between arrows and testimonial cards */
+}
+
+.arrow {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #0f6c96; /* Background color on hover */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+  color: #fff; /* Text color on hover */
+}
+
+.arrow.left {
+  margin-right: 10px; /* Adjust margin between arrows */
+}
+
+.arrow.right {
+  margin-left: 10px; /* Adjust margin between arrows */
+}
