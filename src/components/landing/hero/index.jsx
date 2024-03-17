@@ -8,7 +8,8 @@ export function Hero() {
 		<Fragment>
 			<section className="main__hero flexbox">
 				<div className="main__hero-left">
-					<h1>
+					{/* <div> */}
+					<h1 className="font-bold text-4xl ">
 						<span>Welcome to CraftConnect</span>
 						<br />
 						Hire the best <span>Artisans</span> for any job
@@ -36,7 +37,7 @@ export function Hero() {
 					</div>
 				</div>
 
-				<div className="main__hero-right flex-box">
+				<div className="main__hero-right flexbox">
 					<img
 						src="/hero-image.jpeg"
 						alt=""

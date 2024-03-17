@@ -6,6 +6,13 @@
     background-color: var(--blue-400);
 }
 
+@media (max-width:1380px) {
+    .main__hero {
+        flex-direction: column;
+        gap: 5rem;
+    }
+}
+
 .main__hero-left h1 {
     font-size: 2.25rem;
     font-weight: 700;
@@ -63,4 +70,8 @@
     border: .25rem solid var(--blue-200);
     border-radius: var(--border-radius);
     overflow: hidden;
+}
+
+@media (max-width:1380px) {
+    .main__hero-right {}
 }

@@ -15,6 +15,12 @@
     }
 }
 
+@media (max-width:1380px) {
+    .footer__wrapper {
+        flex-direction: column;
+    }
+}
+
 .footer__links-wrapper {
     justify-content: space-between !important;
 
@@ -26,6 +32,12 @@
     >ul,
     aside>ul {
         flex-direction: column;
+    }
+}
+
+@media (max-width:1380px) {
+    .footer__links-wrapper {
+        width: 100%;
     }
 }
 
@@ -104,7 +116,12 @@
     border: .0625rem solid rgba(255, 255, 255, 0.15);
     overflow: hidden;
     border-radius: var(--border-radius);
+}
 
+@media(max-width: 1380px) {
+    .footer__form {
+        display: none !important;
+    }
 }
 
 .footer__form input {
