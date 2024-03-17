@@ -78,3 +78,40 @@
 }
 
 
+/* Media Queries */
+@media (max-width:1124px){
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:start;
+    gap: 2rem;
+  }
+  
+  .catBox {
+    flex: 0 1 calc(30.33% - 2rem);
+  }
+  
+}
+/* Tablet Screen Sizes */
+@media (max-width:890px){
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:start;
+    gap: 2rem;
+  }
+  
+  .catBox {
+    flex: 1 1 calc(32% - .5rem);
+  }
+  
+}
+
+/* Mobile ScreenSizes */
+
+@media(max-width:450px){
+  .box_header{
+    padding: 3rem;
+  }
+}
+

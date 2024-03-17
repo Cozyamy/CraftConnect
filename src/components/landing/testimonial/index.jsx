@@ -83,12 +83,14 @@ const Testimonials = () => {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
+          arrows: false,
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
+          arrows: false,
         },
       },
     ],

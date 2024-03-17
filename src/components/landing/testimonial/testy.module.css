@@ -63,11 +63,11 @@
   border-radius: 50%;
   font-size: 24px;
   font-size: 15px;
-  color: #333;
+  color:white;
   z-index: 1;
 }
 .arrow:hover {
-  color: white;
+  color: #e1e1e1;
 }
 .next {
   right: -35px;
@@ -80,7 +80,11 @@
 
 
 /* Responsive Adjustments */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 890px) {
+  .testimonials {
+    padding: 0 35px;
+    box-sizing: border-box;
+  }
   .cardItem {
     max-width: 100%;
   }

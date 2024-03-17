@@ -85,7 +85,7 @@
 
 
 import { Fragment } from "react";
-import "./index.css";
+// import "./index.css";
 
 export function SectionWhy() {
 	return (
