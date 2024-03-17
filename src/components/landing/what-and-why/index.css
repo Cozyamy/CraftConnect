@@ -17,35 +17,32 @@
 .why{
     display: flex;
     flex-direction: row;
-    width: 1201px;
-    height: 540px;
-    gap: 64px;
+    width: 100%;
+    gap: 50px;
+}
+
+.whyimage{
+    width: 100%;
+    height: auto;
 }
 
 .whyimage img {
-    width: 593px;
-    height: 490px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    width: 100%;
+    padding-bottom: 10%;
 }
 
 .write{
     display: flex;
     flex-direction: column;
-    width:544px;
-    height:517px;
-}
-
-.whyimage{
-    width: 593px;
-    height: 490px;
+    width:100%;
+    height:auto;
 }
 
 .writeUps1{
     display: flex;
     flex-direction: column;
-    width: 544px;
-    height:(117.5px);
+    width: 100%;
+    height:auto;
     border: 0px 0px 1px 0px;
     gap: 8px;
     border-bottom: 1px solid #E9E9E9;
@@ -55,8 +52,8 @@
 .writeUps2{
     display: flex;
     flex-direction: column;
-    width: 544px;
-    height: 134px;
+    width:100%;
+    height: auto;
     border: 0px 0px 1px 0px;
     gap: 8px;
     border-bottom: 1px solid #E9E9E9;
@@ -66,8 +63,8 @@
 .writeUps3{
     display: flex;
     flex-direction: column;
-    width:544px;
-    height: 145px;
+    width:100%;
+    height: auto;
     border: 0px 0px 1px 0px;
     gap: 8px;
     border-bottom: 1px solid #E9E9E9;
@@ -77,16 +74,15 @@
 .writeUps4{
     display: flex;
     flex-direction: column;
-    width:544px;
-    height:121px;
-    gap: 8px;
-    
+    width:100%;
+    height:auto;
+    gap: 8px; 
 
 }
 .wtitle{
     display: flex;
-    width: 238px;
-    height: 38.5px;
+    width: 100%;
+    height: auto;
     padding: 0px 0px 0.5px 0px;
     gap: 8px;
 
@@ -95,9 +91,7 @@
     width: 38px;
     height: 38px;
 }
-.wtitle h1 {
-    width: 192px;
-    height: 32px ; 
+.wtitle h1{ 
     font-family: Work Sans;
     font-size: 24px;
     font-weight: 600;
@@ -108,23 +102,20 @@
 
 }
 .wtitle_p{
-    width: 541.99px;
-    height: 71px;
     font-family: Work Sans;
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
     color: #333333;
     padding-bottom: 8px;
-
-
+    padding-right: 4%;
 }
 .wtitle2 {
     display: flex;
-    width: 277px;
-    height: 54px;
+    width: 100%;
+    height: auto;
     padding: 8px 0px;
     gap: 8px;
 }
@@ -134,8 +125,6 @@
 }
 
 .wtitle2 h1{    
-    width: 231px;
-    height: 32px;
     font-family: Work Sans;
     font-size: 24px;
     font-weight: 600;
@@ -147,8 +136,8 @@
 
 .wtitle3 {
     display: flex;
-    width:317px;
-    height:54px;
+    width:100%;
+    height:auto;
     padding: 8px 0px 8px 0px;
     gap: 8px;
 
@@ -159,8 +148,6 @@
     height: 38px;
 }
 .wtitle3 h1 {
-    width: 271px;
-    height: 32px;
     font-family: Work Sans;
     font-size: 24px;
     font-weight: 600;
@@ -172,8 +159,8 @@
 
 .wtitle4 {
     display: flex;
-    width: 277px;
-    height: 54px;
+    width: 100%;
+    height: auto;
     padding: 8px 0px ;
     gap: 8px;
 }
@@ -184,8 +171,6 @@
 }
 
 .wtitle4 h1 {
-     width: 231px;
-    height: 32px;
     font-family: Work Sans;
     font-size: 24px;
     font-weight: 600;
@@ -193,5 +178,106 @@
     letter-spacing: 0px;
     text-align: left;
     color: #333333;
+}
 
+@media only screen and (max-width: 768px) {
+
+    .why{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .write{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .writeUps1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .writeUps2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .writeUps3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+    }
+        
+    
+
+    .writeUps4{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wtitle{
+        display: flex;
+        justify-content: center;
+    }
+
+    .wtitle2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    
+    .wtitle2 h1{    
+        letter-spacing: 0px;
+        text-align: center;
+        color: #333333;
+    }
+    
+    .wtitle3 {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    
+    }
+    
+    .wtitle3 h1 {
+        text-align: center;
+        color: #333333;
+    }
+    
+    .wtitle4 {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .wtitle4 h1 {
+        text-align: center;
+        color: #333333;
+    }
+
+    .wtitle_p{
+        width: 70%;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+    .whyimage{
+        width: 100%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    
+    .whyimage img {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    
 }

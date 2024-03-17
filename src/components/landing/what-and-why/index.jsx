@@ -91,9 +91,10 @@ export function SectionWhy() {
 	return (
 		<Fragment>
             <section className="why">
-                <div className="whyImageDiv">
                 <WhyImage/>
-                </div>
+                {/* <div className="whyImageDiv">
+                <WhyImage/>
+                </div> */}
 
                 <div className="write">
                     <div className="writeUps1" >
