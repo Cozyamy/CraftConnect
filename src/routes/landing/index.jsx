@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import { NavBar } from "../../components";
-import WhatsCraft from "../../components/landing/whatsCraft";
-export function Landing() {
-  return (
-    <>
-      <NavBar />
-      <WhatsCraft />
-    </>
-  );
-}
-=======
 import { Fragment } from "react";
 import { Footer, Hero, NavBar, SectionWhy, WhatsCraft, Category, Testimonials } from "../../components";
 import "./index.css";
@@ -51,4 +39,3 @@ export function Landing() {
 		</>
 	);
 }
->>>>>>> e9c2f000155552527eb776d60650228fe4cf8896
