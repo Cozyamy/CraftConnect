@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Footer, Hero, NavBar, SectionWhy, WhatsCraft, Category } from "../../components";
+import { Footer, Hero, NavBar, SectionWhy, WhatsCraft, Category, Testimonials } from "../../components";
 import "./index.css";
 
 export function Landing() {
@@ -16,11 +16,11 @@ export function Landing() {
 					</Fragment>
 
 					<Fragment>
-						{<WhatsCraft /> }
+						<WhatsCraft />
 					</Fragment>
 
 					<Fragment>
-						{<SectionWhy /> }
+						<SectionWhy />
 					</Fragment>
 
 					<Fragment>
@@ -28,7 +28,7 @@ export function Landing() {
 					</Fragment>
 
 					<Fragment>
-						{/* {<Testimonials /> } */}
+						<Testimonials />
 					</Fragment>
 				</div>
 			</main>
