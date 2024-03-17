@@ -1,9 +1,41 @@
-import { NavBar } from "../../components";
+import { Fragment } from "react";
+import { Footer, Hero, NavBar, SectionWhy, WhatsCraft, Category } from "../../components";
+import "./index.css";
 
 export function Landing() {
 	return (
 		<>
-			<NavBar />
+			<Fragment>
+				<NavBar />
+			</Fragment>
+
+			<main className="main">
+				<div className="main__wrapper">
+					<Fragment>
+						<Hero />
+					</Fragment>
+
+					<Fragment>
+						{<WhatsCraft /> }
+					</Fragment>
+
+					<Fragment>
+						{<SectionWhy /> }
+					</Fragment>
+
+					<Fragment>
+						{<Category /> }
+					</Fragment>
+
+					<Fragment>
+						{/* {<Testimonials /> } */}
+					</Fragment>
+				</div>
+			</main>
+
+			<Fragment>
+				<Footer />
+			</Fragment>
 		</>
 	);
 }

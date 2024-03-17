@@ -1,0 +1,50 @@
+.main_container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 183px;
+  padding-right: 183px;
+}
+
+.color_txt_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  align-items: center;
+  gap: 153px;
+  justify-items: center;
+}
+
+.imgs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.two_imgs {
+    display: flex;
+    gap: 1rem;
+}
+
+
+.para {
+  font-size: 14px;
+  width: 481px;
+  line-height: 25px;
+  padding-bottom: 20px;
+}
+
+
+.h2 {
+  font-size: 36px;
+  width: 418px;
+  line-height: 67px;
+  font-weight: bold;
+  height: 67px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.craft_color {
+  color: #0f6c96;
+}
