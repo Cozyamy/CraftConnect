@@ -1,0 +1,12 @@
+.fade_style {
+    animation: pulse 3s cubic-bezier(0.2, 0, 0.4, 0.6) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1.5;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}

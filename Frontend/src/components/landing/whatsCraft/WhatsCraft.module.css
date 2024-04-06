@@ -1,0 +1,22 @@
+.color_txt_container {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.h2, .para, .animated_img {
+  animation-name: slideIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
