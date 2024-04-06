@@ -1,4 +1,3 @@
-<<<<<<< HEAD:Frontend/src/components/landing/nav-bar/index.css
 .header {
     background-color: var(--white-100);
     box-shadow: 0 12px 40px 0 rgba(31, 29, 29, 0.05);
@@ -58,8 +57,4 @@
   
   .sticky-header.nav-transparent {
     background-color: transparent;
-=======
-.header__navigation {
-    /* height: calc(100vh - 20px); */
->>>>>>> b85289450983027581cbf949ba5e534a2f16773d:src/components/landing/nav-bar/index.css
   }
