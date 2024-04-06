@@ -1,0 +1,41 @@
+.testimonials {
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.next {
+  right: -35px;
+}
+
+.prev {
+  left:-35px;
+}
+
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 890px) {
+  .testimonials {
+    padding: 0 35px;
+    box-sizing: border-box;
+  }
+  .cardItem {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cardItem {
+    height: auto;
+    padding: 15px;
+  }
+  
+  .img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  
+  .author {
+    font-size: 20px;
+  }
+}
