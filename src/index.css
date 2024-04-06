@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   /* colors */
   --blue-100: #0F6C96;
@@ -44,6 +48,10 @@
 
 body {
   font-family: var(--ff-ws);
+}
+
+footer {
+  font-family: var(--ff-rc);
 }
 
 

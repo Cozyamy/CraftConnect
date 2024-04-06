@@ -2,6 +2,7 @@
 import Slider from "react-slick";
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import PropTypes from 'prop-types'; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from './testy.module.css';
@@ -25,25 +26,33 @@ const testimonialData = [
     id: 3,
     author: "Adaku",
     image: "/assets/testy3.png",
-    text: "“I love this app! Got a professional plumber to fix an age-long issue with my WC. Smooth!! I totally recommend”",
+    text: "“Got a professional plumber to fix an age-long issue with my WC. Smooth!! I totally recommend”",
     rating: 3
   }
 ];
 
 const NextArrow = ({ onClick }) => {
   return (
-    <div className={`${styles.arrow} ${styles.next}`} onClick={onClick}>
+    <div className={`${styles.arrow} p-2 cursor-pointer bg-[#0f6c96] flex items-center justify-center rounded-full text-white hover:text-[#1E1E1E] absolute top-1/2 ${styles.next}`} onClick={onClick}>
       <FaChevronRight />
     </div>
   );
 };
 
+NextArrow.propTypes = {
+  onClick: PropTypes.func
+};
+
 const PrevArrow = ({ onClick }) => {
   return (
-    <div className={`${styles.arrow} ${styles.prev}`} onClick={onClick}>
+    <div className={`${styles.arrow} p-2 cursor-pointer bg-[#0f6c96] flex items-center justify-center rounded-full text-white hover:text-[#1E1E1E] absolute top-1/2 ${styles.prev}`} onClick={onClick}>
       <FaChevronLeft />
     </div>
   );
+};
+
+PrevArrow.propTypes = {
+  onClick: PropTypes.func
 };
 
 const renderRatingStars = (rating) => {
@@ -83,12 +92,14 @@ const Testimonials = () => {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
+          arrows: false,
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
+          arrows: false,
         },
       },
     ],
@@ -98,15 +109,15 @@ const Testimonials = () => {
     <div className={styles.testimonials}>
       <Slider {...settings}>
         {testimonialData.map((testyData) => (
-          <div key={testyData.id} className={styles.card}>
-            <div className={styles.cardItem}>
+          <div key={testyData.id} className={`${styles.card} outline-none mb-10`}>
+            <div className={`${styles.cardItem} flex flex-col gap-4 max-w-96 px-5 max-h-full hover:scale-90 py-14 rounded-xl items-center justify-center shadow-[0_4px_8px_0px_rgba(26,26,26,0.43)] m-2.5 cursor-pointer text-center bg-white`}>
               <div className={styles.images}>
                 <img src={testyData.image} alt="image" className={styles.img} />
               </div>
-              <div className={styles.text}>
-                <p className={styles.author}>{testyData.author}</p>
-                <p>{testyData.text}</p>
-                <div className={styles.ratings}>
+              <div className={`${styles.text} line-clamp-4`}>
+                <p className={`${styles.author} mb-5 font-medium text-[#0f6c96] text-2xl`}>{testyData.author}</p>
+                <p className={`${styles.texttsty} line-clamp-3`}>{testyData.text}</p>
+                <div className={`${styles.ratings} text-[#0f6c96] flex flex-row items-center justify-center pt-2 pb-5`}>
                   {renderRatingStars(testyData.rating)}
                 </div>
               </div>

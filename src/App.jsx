@@ -3,7 +3,7 @@ import { Error, Landing } from "./routes";
 
 export default function App() {
 	return (
-		<section className="container">
+		<section className="containers">
 			<RouterProvider router={router} />
 		</section>
 	);
