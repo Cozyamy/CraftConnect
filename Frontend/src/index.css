@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
 :root {
   /* colors */
   --blue-100: #0F6C96;

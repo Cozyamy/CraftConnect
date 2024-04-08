@@ -1,119 +1,78 @@
-import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 import { Fragment, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { NAVIGATION_LINKS } from "../../../assets/data";
-import "./index.css";
+import { HiOutlineBars4 } from "react-icons/hi2";
+import logoheader from "/Logo-header.svg";
+import './index.css'
 
 export function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-	console.log("Toggling menu");
-	setIsMenuOpen(!isMenuOpen);
+  const toggleClick = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
-  
+
+  const navLinks = [
+    { text: "Home", to: "/" },
+    { text: "About", to: "/about" },
+    { text: "Services", to: "/services" },
+    { text: "Contact", to: "/contact" },
+  ];
 
   return (
     <Fragment>
-      <header className="header sticky-header sticky top-0 bg-transparent backdrop-blur shadow-[0_12px_40px_0_rgba(31,29,29,0.05)] z-[1000]">
+      <header className="header sticky-header sticky top-0 bg-white shadow-[0_12px_40px_0_rgba(31,29,29,0.05)] z-[1000]">
         <div className="header__wrapper flex flex-row py-4 mx-auto my-0 lg:max-w-[90%] max-w-[90%] justify-between items-center">
-          <Logo image={"/Logo-header.svg"} />
-
-          <button
-            className="header__menu-toggle lg:hidden"
-            onClick={toggleMenu}
+          <div className="sm-max:w-[150px] md-max:w-[150px]">
+            <img src={logoheader} alt="header_logo" className="sm-max:w-full" />
+          </div>
+          <ul className={`flex items-center justify-center gap-8 sm-max:absolute sm-max:bg-white sm-max:shadow ${isMenuOpen ? "sm-max:top-[4rem]" : "sm-max:top-[-100rem]"} sm-max:left-0 sm-max:right-0 sm-max:w-full sm-max:flex sm-max:flex-col sm-max:items-start sm-max:gap-4 sm-max:px-4 sm-max:py-8 transition-all duration-300 md-max:gap`}>
+            {navLinks.map((link, index) => (
+              <li key={index} className="links text-[18px] hover:text-[#1287BB]">
+                <NavLink
+                  to={link.to}
+                  style={{
+                    color:
+                      window.location.pathname === link.to
+                        ? "#1287BB"
+                        : "black",
+                  }}
+                >
+                  {link.text}
+                </NavLink>
+              </li>
+            ))}
+            <div className="sign flex gap-2 lg:hidden md:hidden sm-max:flex">
+              <CtaBtn text="Sign Up" to="/signup" />
+              <CtaBtn text="Login" to="/login" />
+            </div>
+          </ul>
+          <div className="flex gap-2 sm-max:hidden">
+            <CtaBtn text="Sign Up" to="/signup" />
+            <CtaBtn text="Login" to="/login" />
+          </div>
+          <div
+            className="navBurger text-2xl cursor-pointer bg-[#efecec] shadow p-1 rounded lg:hidden"
+            onClick={toggleClick}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
-
-          <nav
-            className={`header__navigation lg:flex flex-col lg:flex-row  ${
-              isMenuOpen
-                ? "flex absolute right-0 top-5 bg-[#fef7e5] overflow-hidden w-0 transition-all ease-in"
-                : "hidden"
-            }`}
-          >
-            <NavigationLinks closeMenu={() => setIsMenuOpen(false)} />
-          </nav>
-
-          <button
-            className={`header__navigation lg:flex flex-row ${
-              isMenuOpen
-                ? "flex absolute right-0 top-5 bg-[#fef7e5] overflow-hidden w-0 transition-all ease-in"
-                : "hidden"
-            }`}
-            onClick={() => {
-              setIsMenuOpen(false); // Close the menu when the button is clicked
-            }}
-          >
-            <CTA_Button />
-          </button>
+            <HiOutlineBars4  />
+          </div>
         </div>
       </header>
     </Fragment>
   );
 }
 
-export function Logo({ image }) {
+
+function CtaBtn({ text, to }) {
   return (
     <Fragment>
-      <Link to="/" className="header__logo lg:max-w-60 max-w-44">
-        <img src={image} alt="craft_connect_logo" className="max-w-full" />
-      </Link>
-    </Fragment>
-  );
-}
-
-function NavigationLinks({ closeMenu }) {
-  const handleClick = () => {
-    closeMenu();
-  };
-
-  return (
-    <Fragment>
-      <ul className="flex flex-row text-[#1A1A1A] text-2xl gap-8 font-medium">
-        {NAVIGATION_LINKS.map((link, index) => (
-          <li key={index}>
-            <NavLink to={link.href} onClick={handleClick}>
-              {link.title}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-    </Fragment>
-  );
-}
-
-function CTA_Button() {
-  return (
-    <Fragment>
-      <Link
-        to="/signup"
-        className="header__cta text-white bg-[#1287BB] rounded-lg p-3 text-2xl font-medium"
+      <NavLink
+        to={to}
+        className="border:solid border-2 border-[#1287BB] text-white text-[18px] bg-[#1287BB] rounded-lg p-3 font-medium hover:bg-transparent hover:text-[#1287BB]"
       >
-        <span>Sign Up</span>
-      </Link>
+        <span>{text}</span>
+      </NavLink>
     </Fragment>
   );
 }
 
-Logo.propTypes = {
-  image: PropTypes.string.isRequired,
-};
-
-NavigationLinks.propTypes = {
-  closeMenu: PropTypes.func.isRequired,
-};
