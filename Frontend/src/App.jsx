@@ -1,7 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Error, Landing } from "./routes";
+import { Landing } from "./routes";
 import SignUp from "./components/authentication/Signup/Signup";
 import Login from "./components/authentication/Login/Login";
+import Morecategory from "./components/CategoryData/Morecategory";
 
 export default function App() {
 	return (
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
 		element: <Landing />,
 	},
 	{
-    path: "signUp",
+    path: "/signUp",
     element: <SignUp/>,
   },
 	{
@@ -25,7 +26,8 @@ const router = createBrowserRouter([
     element: <Login/>,
   },
 	{
-		path: "*",
-		element: <Error />,
-	},
+    path: "/category",
+    element: <Morecategory/> ,
+  },
+
 ]);

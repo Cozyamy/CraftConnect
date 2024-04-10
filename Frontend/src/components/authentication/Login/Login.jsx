@@ -19,6 +19,7 @@ const Login = () => {
   const [showGoogleSignInModal, setShowGoogleSignInModal] = useState(false);
   const [user, setUser] = useState(null);
   const [hasReloadedOnce, setHasReloadedOnce] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // State to track loading state of the Sign In button
 
   const handleLogInClick = () => {
     navigate("/signup");
@@ -73,6 +74,8 @@ const Login = () => {
       return;
     }
 
+    setIsLoading(true); // Set loading state to true when the Sign In button is clicked
+
     try {
       await signInWithEmailAndPassword(Oauth, email, password);
       setFormErrors({
@@ -114,6 +117,8 @@ const Login = () => {
           userNotFound: false,
         });
       }
+    } finally {
+      setIsLoading(false); // Reset loading state after form submission
     }
   };
 
@@ -205,8 +210,14 @@ const Login = () => {
 
             <button
               type="submit"
-              className="bg-[#0F6C96] text-white font-[400] py-2 px-4 rounded-lg mb-4 w-full border-solid border-[1px] hover:bg-white hover:border-[#0F6C96] hover:text-[#0F6C96]"
+              className="relative bg-[#0F6C96] text-white font-[400] py-2 px-4 rounded-lg mb-4 w-full border-solid border-[1px] hover:bg-white hover:border-[#0F6C96] hover:text-[#0F6C96]"
+              disabled={isLoading} // Disable button when loading
             >
+              {isLoading && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div>
+                </div>
+              )}
               Sign In
             </button>
             

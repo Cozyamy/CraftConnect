@@ -25,6 +25,7 @@ const SignUp = () => {
   const [showModal, setShowModal] = useState(false);
   const [shouldReload, setShouldReload] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // State to track loading state of the Next button
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(Oauth, (user) => {
@@ -57,9 +58,11 @@ const SignUp = () => {
       validateEmail(formData.email) &&
       formData.password.length >= 6;
     if (isFormValid) {
+      setIsLoading(true); // Set loading state to true when the Next button is clicked
       try {
         await signInWithEmail(); // Call signInWithEmail here
         console.log("User signed up successfully");
+        navigate("/category");
         // Clear form errors when the form is submitted successfully
         clearFormErrors();
         // Clear form fields
@@ -70,6 +73,8 @@ const SignUp = () => {
         }, 3000); // Hide modal after 3 seconds
       } catch (error) {
         console.error("Error signing up:", error.message);
+      } finally {
+        setIsLoading(false); // Reset loading state after form submission
       }
     } else {
       updateFormErrors();
@@ -279,11 +284,17 @@ const SignUp = () => {
                 </small>
               )}
             </div>
-            {/* Next button */}
+            {/* Next button with loading spinner animation */}
             <button
               type="submit"
-              className="bg-[#0f6c96] text-white font-[400] py-2 mt-4 px-4 rounded-lg mb-4 w-full border-solid border-[1px] hover:bg-white hover:border-[#0F6C96] hover:text-[#0F6C96]"
+              className="relative bg-[#0f6c96] text-white font-[400] py-2 mt-4 px-4 rounded-lg mb-4 w-full border-solid border-[1px] hover:bg-white hover:border-[#0F6C96] hover:text-[#0F6C96]"
+              disabled={isLoading} // Disable button when loading
             >
+              {isLoading && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div>
+                </div>
+              )}
               Next
             </button>
             {/* Google Sign-In button */}

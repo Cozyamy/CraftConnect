@@ -86,7 +86,7 @@ export function Category() {
             className={`${styles.see_more} flex items-center justify-center mt-10 gap-2 cursor-pointer rounded-lg py-2 px-4 bg-white hover:scale-110 sm:self-start self-center`}
           >
             <a
-              href=""
+              href="/signup"
               className="font-semibold text-xl text-[#0F6C96] flex items-center"
             >
               See more
